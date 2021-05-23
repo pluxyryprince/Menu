@@ -28,5 +28,18 @@ namespace Menu
         {
             Application.Exit();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.white". При необходимости она может быть перемещена или удалена.
+            this.whiteTableAdapter.Fill(this.wine_mapDataSet.white);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.red". При необходимости она может быть перемещена или удалена.
+            this.redTableAdapter.Fill(this.wine_mapDataSet.red);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.pink". При необходимости она может быть перемещена или удалена.
+            this.pinkTableAdapter.Fill(this.wine_mapDataSet.pink);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.sparkling". При необходимости она может быть перемещена или удалена.
+            this.sparklingTableAdapter.Fill(this.wine_mapDataSet.sparkling);
+
+        }
     }
 }

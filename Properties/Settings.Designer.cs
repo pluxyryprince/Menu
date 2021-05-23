@@ -33,5 +33,16 @@ namespace Menu.Properties {
                 return ((string)(this["menuConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=127.0.01;user id=root;password=root;persistsecurityinfo=True;database=wine" +
+            "_map")]
+        public string wine_mapConnectionString {
+            get {
+                return ((string)(this["wine_mapConnectionString"]));
+            }
+        }
     }
 }
