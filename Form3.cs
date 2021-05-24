@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Menu
@@ -31,15 +24,21 @@ namespace Menu
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.white". При необходимости она может быть перемещена или удалена.
-            this.whiteTableAdapter.Fill(this.wine_mapDataSet.white);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.red". При необходимости она может быть перемещена или удалена.
-            this.redTableAdapter.Fill(this.wine_mapDataSet.red);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.pink". При необходимости она может быть перемещена или удалена.
-            this.pinkTableAdapter.Fill(this.wine_mapDataSet.pink);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.sparkling". При необходимости она может быть перемещена или удалена.
-            this.sparklingTableAdapter.Fill(this.wine_mapDataSet.sparkling);
-
+            try
+            {
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.white". При необходимости она может быть перемещена или удалена.
+                this.whiteTableAdapter.Fill(this.wine_mapDataSet.white);
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.red". При необходимости она может быть перемещена или удалена.
+                this.redTableAdapter.Fill(this.wine_mapDataSet.red);
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.pink". При необходимости она может быть перемещена или удалена.
+                this.pinkTableAdapter.Fill(this.wine_mapDataSet.pink);
+                // TODO: данная строка кода позволяет загрузить данные в таблицу "wine_mapDataSet.sparkling". При необходимости она может быть перемещена или удалена.
+                this.sparklingTableAdapter.Fill(this.wine_mapDataSet.sparkling);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка подключения к базе данных. Попробуйте еще раз.");
+            }
         }
     }
 }
