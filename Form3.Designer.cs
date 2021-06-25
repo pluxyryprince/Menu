@@ -35,37 +35,37 @@ namespace Menu
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.coutryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sparklingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wine_mapDataSet = new Menu.wine_mapDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.coutryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pinkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.coutryDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.redBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.coutryDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.whiteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sparklingTableAdapter = new Menu.wine_mapDataSetTableAdapters.sparklingTableAdapter();
             this.pinkTableAdapter = new Menu.wine_mapDataSetTableAdapters.pinkTableAdapter();
             this.redTableAdapter = new Menu.wine_mapDataSetTableAdapters.redTableAdapter();
             this.whiteTableAdapter = new Menu.wine_mapDataSetTableAdapters.whiteTableAdapter();
-            this.coutryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coutryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coutryDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coutryDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -153,6 +153,33 @@ namespace Menu
             this.dataGridView1.Size = new System.Drawing.Size(1148, 485);
             this.dataGridView1.TabIndex = 0;
             // 
+            // coutryDataGridViewTextBoxColumn
+            // 
+            this.coutryDataGridViewTextBoxColumn.DataPropertyName = "coutry";
+            this.coutryDataGridViewTextBoxColumn.HeaderText = "Страна производства";
+            this.coutryDataGridViewTextBoxColumn.Name = "coutryDataGridViewTextBoxColumn";
+            this.coutryDataGridViewTextBoxColumn.Width = 168;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // volDataGridViewTextBoxColumn
+            // 
+            this.volDataGridViewTextBoxColumn.DataPropertyName = "vol";
+            this.volDataGridViewTextBoxColumn.HeaderText = "Объём";
+            this.volDataGridViewTextBoxColumn.Name = "volDataGridViewTextBoxColumn";
+            this.volDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Цена (руб.)";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 101;
+            // 
             // sparklingBindingSource
             // 
             this.sparklingBindingSource.DataMember = "sparkling";
@@ -199,6 +226,33 @@ namespace Menu
             this.dataGridView2.Size = new System.Drawing.Size(1148, 485);
             this.dataGridView2.TabIndex = 0;
             // 
+            // coutryDataGridViewTextBoxColumn1
+            // 
+            this.coutryDataGridViewTextBoxColumn1.DataPropertyName = "coutry";
+            this.coutryDataGridViewTextBoxColumn1.HeaderText = "Страна производства";
+            this.coutryDataGridViewTextBoxColumn1.Name = "coutryDataGridViewTextBoxColumn1";
+            this.coutryDataGridViewTextBoxColumn1.Width = 168;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Название";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
+            // volDataGridViewTextBoxColumn1
+            // 
+            this.volDataGridViewTextBoxColumn1.DataPropertyName = "vol";
+            this.volDataGridViewTextBoxColumn1.HeaderText = "Объём";
+            this.volDataGridViewTextBoxColumn1.Name = "volDataGridViewTextBoxColumn1";
+            this.volDataGridViewTextBoxColumn1.Width = 82;
+            // 
+            // priceDataGridViewTextBoxColumn1
+            // 
+            this.priceDataGridViewTextBoxColumn1.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn1.HeaderText = "Цена (руб.)";
+            this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
+            this.priceDataGridViewTextBoxColumn1.Width = 101;
+            // 
             // pinkBindingSource
             // 
             this.pinkBindingSource.DataMember = "pink";
@@ -239,6 +293,33 @@ namespace Menu
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(1148, 485);
             this.dataGridView3.TabIndex = 0;
+            // 
+            // coutryDataGridViewTextBoxColumn2
+            // 
+            this.coutryDataGridViewTextBoxColumn2.DataPropertyName = "coutry";
+            this.coutryDataGridViewTextBoxColumn2.HeaderText = "Страна производства";
+            this.coutryDataGridViewTextBoxColumn2.Name = "coutryDataGridViewTextBoxColumn2";
+            this.coutryDataGridViewTextBoxColumn2.Width = 168;
+            // 
+            // nameDataGridViewTextBoxColumn2
+            // 
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "Название";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            // 
+            // volDataGridViewTextBoxColumn2
+            // 
+            this.volDataGridViewTextBoxColumn2.DataPropertyName = "vol";
+            this.volDataGridViewTextBoxColumn2.HeaderText = "Объём";
+            this.volDataGridViewTextBoxColumn2.Name = "volDataGridViewTextBoxColumn2";
+            this.volDataGridViewTextBoxColumn2.Width = 82;
+            // 
+            // priceDataGridViewTextBoxColumn2
+            // 
+            this.priceDataGridViewTextBoxColumn2.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn2.HeaderText = "Цена (руб.)";
+            this.priceDataGridViewTextBoxColumn2.Name = "priceDataGridViewTextBoxColumn2";
+            this.priceDataGridViewTextBoxColumn2.Width = 101;
             // 
             // redBindingSource
             // 
@@ -281,108 +362,6 @@ namespace Menu
             this.dataGridView4.Size = new System.Drawing.Size(1148, 485);
             this.dataGridView4.TabIndex = 0;
             // 
-            // whiteBindingSource
-            // 
-            this.whiteBindingSource.DataMember = "white";
-            this.whiteBindingSource.DataSource = this.wine_mapDataSet;
-            // 
-            // sparklingTableAdapter
-            // 
-            this.sparklingTableAdapter.ClearBeforeFill = true;
-            // 
-            // pinkTableAdapter
-            // 
-            this.pinkTableAdapter.ClearBeforeFill = true;
-            // 
-            // redTableAdapter
-            // 
-            this.redTableAdapter.ClearBeforeFill = true;
-            // 
-            // whiteTableAdapter
-            // 
-            this.whiteTableAdapter.ClearBeforeFill = true;
-            // 
-            // coutryDataGridViewTextBoxColumn
-            // 
-            this.coutryDataGridViewTextBoxColumn.DataPropertyName = "coutry";
-            this.coutryDataGridViewTextBoxColumn.HeaderText = "Страна производства";
-            this.coutryDataGridViewTextBoxColumn.Name = "coutryDataGridViewTextBoxColumn";
-            this.coutryDataGridViewTextBoxColumn.Width = 168;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // volDataGridViewTextBoxColumn
-            // 
-            this.volDataGridViewTextBoxColumn.DataPropertyName = "vol";
-            this.volDataGridViewTextBoxColumn.HeaderText = "Объём";
-            this.volDataGridViewTextBoxColumn.Name = "volDataGridViewTextBoxColumn";
-            this.volDataGridViewTextBoxColumn.Width = 82;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Цена (руб.)";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 101;
-            // 
-            // coutryDataGridViewTextBoxColumn1
-            // 
-            this.coutryDataGridViewTextBoxColumn1.DataPropertyName = "coutry";
-            this.coutryDataGridViewTextBoxColumn1.HeaderText = "Страна производства";
-            this.coutryDataGridViewTextBoxColumn1.Name = "coutryDataGridViewTextBoxColumn1";
-            this.coutryDataGridViewTextBoxColumn1.Width = 168;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Название";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            // 
-            // volDataGridViewTextBoxColumn1
-            // 
-            this.volDataGridViewTextBoxColumn1.DataPropertyName = "vol";
-            this.volDataGridViewTextBoxColumn1.HeaderText = "Объём";
-            this.volDataGridViewTextBoxColumn1.Name = "volDataGridViewTextBoxColumn1";
-            this.volDataGridViewTextBoxColumn1.Width = 82;
-            // 
-            // priceDataGridViewTextBoxColumn1
-            // 
-            this.priceDataGridViewTextBoxColumn1.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn1.HeaderText = "Цена (руб.)";
-            this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
-            this.priceDataGridViewTextBoxColumn1.Width = 101;
-            // 
-            // coutryDataGridViewTextBoxColumn2
-            // 
-            this.coutryDataGridViewTextBoxColumn2.DataPropertyName = "coutry";
-            this.coutryDataGridViewTextBoxColumn2.HeaderText = "Страна производства";
-            this.coutryDataGridViewTextBoxColumn2.Name = "coutryDataGridViewTextBoxColumn2";
-            this.coutryDataGridViewTextBoxColumn2.Width = 168;
-            // 
-            // nameDataGridViewTextBoxColumn2
-            // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "Название";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            // 
-            // volDataGridViewTextBoxColumn2
-            // 
-            this.volDataGridViewTextBoxColumn2.DataPropertyName = "vol";
-            this.volDataGridViewTextBoxColumn2.HeaderText = "Объём";
-            this.volDataGridViewTextBoxColumn2.Name = "volDataGridViewTextBoxColumn2";
-            this.volDataGridViewTextBoxColumn2.Width = 82;
-            // 
-            // priceDataGridViewTextBoxColumn2
-            // 
-            this.priceDataGridViewTextBoxColumn2.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn2.HeaderText = "Цена (руб.)";
-            this.priceDataGridViewTextBoxColumn2.Name = "priceDataGridViewTextBoxColumn2";
-            this.priceDataGridViewTextBoxColumn2.Width = 101;
-            // 
             // coutryDataGridViewTextBoxColumn3
             // 
             this.coutryDataGridViewTextBoxColumn3.DataPropertyName = "coutry";
@@ -410,6 +389,27 @@ namespace Menu
             this.priceDataGridViewTextBoxColumn3.Name = "priceDataGridViewTextBoxColumn3";
             this.priceDataGridViewTextBoxColumn3.Width = 101;
             // 
+            // whiteBindingSource
+            // 
+            this.whiteBindingSource.DataMember = "white";
+            this.whiteBindingSource.DataSource = this.wine_mapDataSet;
+            // 
+            // sparklingTableAdapter
+            // 
+            this.sparklingTableAdapter.ClearBeforeFill = true;
+            // 
+            // pinkTableAdapter
+            // 
+            this.pinkTableAdapter.ClearBeforeFill = true;
+            // 
+            // redTableAdapter
+            // 
+            this.redTableAdapter.ClearBeforeFill = true;
+            // 
+            // whiteTableAdapter
+            // 
+            this.whiteTableAdapter.ClearBeforeFill = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -422,7 +422,7 @@ namespace Menu
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Винная карта";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

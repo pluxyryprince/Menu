@@ -13,7 +13,7 @@ namespace Menu
         private void button1_Click(object sender, EventArgs e)
         {
             ActiveForm.Hide();
-            Form1 frm1 = new Form1();
+            userStartForm frm1 = new userStartForm();
             frm1.Show();
         }
 
@@ -24,6 +24,8 @@ namespace Menu
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            this.FormClosing += MainForm_Closing;
+
             try
             {
                 this.vegetablesTableAdapter.Fill(this.menuDataSet.vegetables);
@@ -41,6 +43,14 @@ namespace Menu
             {
                 MessageBox.Show("Ошибка подключения к базе данных. Попробуйте еще раз.");
             }
+        }
+
+        private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        //переназначение крестика на форме чтобы он закрывал все формы сразу
+        //на случай, если в ходе работы приложения было открыто более одной формы
+        //если не переназначать эту кнопку, то приложение не сможет полностью закрыться, если было открыто более одной формы, т.к. другие формы останутся висеть в процессах
+        {
+            Application.Exit();
         }
 
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
