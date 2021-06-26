@@ -39,8 +39,6 @@ namespace Menu
             cookAuthorization.Show();
         }
 
-    
-
         private void cookStartForm_Load(object sender, EventArgs e)
         {
 

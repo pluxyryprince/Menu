@@ -52,5 +52,10 @@ namespace Menu
             AuthorizationUser frm5 = new AuthorizationUser();
             frm5.Show();
         }
+
+        private void userStartForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

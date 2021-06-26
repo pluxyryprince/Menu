@@ -137,6 +137,7 @@ namespace Menu
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "userStartForm";
             this.Text = "userStartForm";
+            this.Load += new System.EventHandler(this.userStartForm_Load);
             this.ResumeLayout(false);
 
         }

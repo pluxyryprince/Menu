@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Menu
 {
@@ -9,6 +10,8 @@ namespace Menu
         {
             InitializeComponent();
         }
+
+        private string connect = "server=127.0.0.1;userid=root;password=root;database=menu_users;port=3306";
 
         private void reservation_Load(object sender, EventArgs e)
         {
@@ -22,14 +25,25 @@ namespace Menu
         {
             Application.Exit();
         }
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-           
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                MySqlConnection connection = new MySqlConnection(connect);
+                connection.Open();//соединение с бд
+                MySqlCommand command = new MySqlCommand($"INSERT INTO `reserve` (`id`, `place`, `place_number`, `date`, `time`, `name`) VALUES (NULL, '{place.Text}', '{place_num.Text}', '{date.Text}', '{time.Text}', '{name.Text}');")
+                {
+                    Connection = connection//команда для заполнения
+                };
+                command.ExecuteNonQuery();//выполнение команды
+                MessageBox.Show("Место успешно забронировано!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("");
+            }
         }
     }
 }

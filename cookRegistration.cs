@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace Menu
@@ -14,29 +13,35 @@ namespace Menu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ConnectDatabase db = new ConnectDatabase();
-            
-            MySqlCommand command = new MySqlCommand("INSERT INTO `cooks` (`id`, `name`, `surname`, `thirdname`, `login`, `password`) VALUES (NULL, @name, @surname, @thirdname, @login, @password)", db.GetConnection());
-            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = login.Text;
-            command.Parameters.Add("@password", MySqlDbType.VarChar).Value = password.Text;
-            command.Parameters.Add("@name", MySqlDbType.VarChar).Value = userName.Text;
-            command.Parameters.Add("@surname", MySqlDbType.VarChar).Value = userSurname.Text;
-            command.Parameters.Add("@thirdname", MySqlDbType.VarChar).Value = userThirdname.Text;
-
-            db.OpenConnection();
-            if (command.ExecuteNonQuery() == 1)
+            try
             {
-                MessageBox.Show("Учетная запись успешно создана!");
-            }
-            else
-            {
-                MessageBox.Show("Ошибка при создании учетной записи");
-            }
-            db.CloseConnection();
+                ConnectDatabase db = new ConnectDatabase();
+                MySqlCommand command = new MySqlCommand("INSERT INTO `cooks` (`id`, `name`, `surname`, `thirdname`, `login`, `password`) VALUES (NULL, @name, @surname, @thirdname, @login, @password)", db.GetConnection());
+                command.Parameters.Add("@login", MySqlDbType.VarChar).Value = login.Text;
+                command.Parameters.Add("@password", MySqlDbType.VarChar).Value = password.Text;
+                command.Parameters.Add("@name", MySqlDbType.VarChar).Value = userName.Text;
+                command.Parameters.Add("@surname", MySqlDbType.VarChar).Value = userSurname.Text;
+                command.Parameters.Add("@thirdname", MySqlDbType.VarChar).Value = userThirdname.Text;
 
-            ActiveForm.Hide();
-            cookStartFormAfterRegistrationOrAuthorization form = new cookStartFormAfterRegistrationOrAuthorization();
-            form.Show();
+                db.OpenConnection();
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Учетная запись успешно создана!");
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка при создании учетной записи");
+                }
+                db.CloseConnection();
+
+                ActiveForm.Hide();
+                cookStartFormAfterRegistrationOrAuthorization form = new cookStartFormAfterRegistrationOrAuthorization();
+                form.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Обшибка при регистрации");
+            }
         }
 
         private void cookRegistration_Load(object sender, EventArgs e)

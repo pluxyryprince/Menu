@@ -14,30 +14,38 @@ namespace Menu
         static public string role;
         private void button3_Click(object sender, EventArgs e)
         {
-            string Login = log.Text;
-            string Password = pass.Text;
-            ConnectDatabase db = new ConnectDatabase();
-            DataTable table = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `visitors` WHERE `login` = @login AND `password` = @password", db.GetConnection());
-            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = Login;
-            command.Parameters.Add("@password", MySqlDbType.VarChar).Value = Password;
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-            MySqlDataAdapter users = new MySqlDataAdapter($"Select role From visitors", db.GetConnection());
-            role = Convert.ToString(table.Rows[0][5]);
-            if (table.Rows.Count > 0)
+            try
             {
-                ActiveForm.Hide();
-                cookStartFormAfterRegistrationOrAuthorization csForm = new cookStartFormAfterRegistrationOrAuthorization();
-                csForm.Show();
-            }
-            else
-                MessageBox.Show("No");
+                string Login = log.Text;
+                string Password = pass.Text;
+                ConnectDatabase db = new ConnectDatabase();
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `visitors` WHERE `login` = @login AND `password` = @password", db.GetConnection());
+                command.Parameters.Add("@login", MySqlDbType.VarChar).Value = Login;
+                command.Parameters.Add("@password", MySqlDbType.VarChar).Value = Password;
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                MySqlDataAdapter users = new MySqlDataAdapter($"Select role From visitors", db.GetConnection());
+                role = Convert.ToString(table.Rows[0][5]);
+                if (table.Rows.Count > 0)
+                {
+                    ActiveForm.Hide();
+                    cookStartFormAfterRegistrationOrAuthorization csForm = new cookStartFormAfterRegistrationOrAuthorization();
+                    csForm.Show();
+                }
+                else
+                    MessageBox.Show("No");
 
-            ActiveForm.Hide();
-            userAR usstfrm = new userAR();
-            usstfrm.Show();
+                ActiveForm.Hide();
+                userAR usstfrm = new userAR();
+                usstfrm.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка при авторизации");
+            }
+           
         }
         private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         //переназначение крестика на форме чтобы он закрывал все формы сразу

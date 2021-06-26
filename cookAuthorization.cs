@@ -14,26 +14,33 @@ namespace Menu
         static public string role;
         public void button3_Click(object sender, EventArgs e)//авторизация работника кухни
         {
-            string Login = login.Text;
-            string Password = password.Text;
-            ConnectDatabase db = new ConnectDatabase();
-            DataTable table = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `cooks` WHERE `login` = @login AND `password` = @password", db.GetConnection());
-            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = Login;
-            command.Parameters.Add("@password", MySqlDbType.VarChar).Value = Password;
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-            MySqlDataAdapter users = new MySqlDataAdapter($"Select role From cooks", db.GetConnection());
-            role = Convert.ToString(table.Rows[0][5]);
-            if (table.Rows.Count > 0)
+            try
             {
-                ActiveForm.Hide();
-                cookStartFormAfterRegistrationOrAuthorization csForm = new cookStartFormAfterRegistrationOrAuthorization();
-                csForm.Show();
+                string Login = login.Text;
+                string Password = password.Text;
+                ConnectDatabase db = new ConnectDatabase();
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM `cooks` WHERE `login` = @login AND `password` = @password", db.GetConnection());
+                command.Parameters.Add("@login", MySqlDbType.VarChar).Value = Login;
+                command.Parameters.Add("@password", MySqlDbType.VarChar).Value = Password;
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                MySqlDataAdapter users = new MySqlDataAdapter($"Select role From cooks", db.GetConnection());
+                role = Convert.ToString(table.Rows[0][5]);
+                if (table.Rows.Count > 0)
+                {
+                    ActiveForm.Hide();
+                    cookStartFormAfterRegistrationOrAuthorization csForm = new cookStartFormAfterRegistrationOrAuthorization();
+                    csForm.Show();
+                }
+                else
+                    MessageBox.Show("No");
             }
-            else
-                MessageBox.Show("No");  
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка при авторизации");
+            }
         }
 
         private void cookAuthorization_Load(object sender, EventArgs e)
